@@ -29,7 +29,7 @@ class ConvNet(nn.Module):
         self.layer3.add_module("Conv3", self.conv3)
         self.layer3.add_module("BN3", self.conv3_bn)
 
-        x = torch.randn(100, 100).view(-1, 1, 100, 100)
+        x = torch.randn(50, 50).view(-1, 1, 50, 50)
         self._to_linear = None
         self.convs(x)
 
@@ -59,7 +59,7 @@ class ConvNet(nn.Module):
         x = self.convs(x)
         x = x.view(-1, self._to_linear)
         #x = F.sigmoid(self.fc1_bn(self.fc1(x)))
-        x= F.sigmoid(self.fc1(x))
+        x = F.sigmoid(self.fc1(x))
 
         x = self.dropout(x)
         x = self.fc2(x)

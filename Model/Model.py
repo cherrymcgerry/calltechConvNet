@@ -32,6 +32,39 @@ class Model(object):
 
         #TODO EVAL
 
+    def test(self):
+        correct = 0
+        total = 0
+
+        for i, data in enumerate(self.data_loader):
+            self.model.zero_grad()
+
+            inputI = data[0].view(-1, 1, 50, 50).to(device=self.device, dtype=torch.float)  # TODO add .view
+            output = data[1].to(device=self.device, dtype=torch.float)
+
+            prediction = self.model(inputI)
+            self.optim.step()
+
+            # eval
+            eval = []
+            predicted_class = []
+            real_class = []
+            for sample in prediction:
+                predicted_class.append(torch.argmax(sample))
+            for sample in output:
+                real_class.append(torch.argmax(sample))
+
+            for i in range(len(predicted_class) - 1):
+                eval.append({'pred': predicted_class[i], 'real': real_class[i]})
+
+            for sample in eval:
+                if sample['pred'] == sample['real']:
+                    correct += 1
+                total += 1
+
+        self.epoch += 1
+        print(F'Accuracy: {round(correct / total, 3)}')
+
     def train(self):
         lossF = nn.BCELoss()
 
@@ -43,7 +76,7 @@ class Model(object):
             for i, data in enumerate(self.data_loader):
                 self.model.zero_grad()
 
-                inputI = data[0].view(-1,1,100,100).to(device=self.device, dtype=torch.float) #TODO add .view
+                inputI = data[0].view(-1,1,50,50).to(device=self.device, dtype=torch.float) #TODO add .view
                 output = data[1].to(device = self.device, dtype=torch.float)
 
                 prediction = self.model(inputI)
@@ -57,12 +90,12 @@ class Model(object):
                 predicted_class = []
                 real_class = []
                 for sample in prediction:
-                    predicted_class.append(torch.argmax(prediction))
+                    predicted_class.append(torch.argmax(sample))
                 for sample in output:
-                    real_class.append(torch.argmax(output))
+                    real_class.append(torch.argmax(sample))
 
-                for i in range(len(predicted_class)):
-                    eval[i] = {'pred': predicted_class[i], 'real': real_class[i]}
+                for i in range(len(predicted_class)-1):
+                    eval.append( {'pred': predicted_class[i], 'real': real_class[i]})
 
                 for sample in eval:
                     if sample['pred'] == sample['real']:

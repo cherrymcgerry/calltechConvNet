@@ -7,7 +7,7 @@ import pickle
 
 
 def main():
-    data_loader = setup_database(True, True, 20)
+    data_loader = setup_database(False, True, 20)
 
     with open(os.path.join('../101_ObjectCategories', 'label_dictionary.data'), 'rb') as f:
         labels = pickle.load(f)
@@ -17,7 +17,10 @@ def main():
 
     model = Model(data_loader)
 
-    model.train()
+    #model.train()
+    model.test()
+
+
 
 
 if __name__ == '__main__':

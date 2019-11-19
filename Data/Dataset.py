@@ -6,7 +6,7 @@ from torchvision.transforms import transforms
 
 from torch.utils.data import Dataset
 
-OUTPUT_SIZE = (100, 100)
+OUTPUT_SIZE = (50, 50)
 
 class data(Dataset):
 
@@ -27,7 +27,7 @@ class data(Dataset):
 
         inputI = rescale(inputI, OUTPUT_SIZE)
         inputI =torch.from_numpy(inputI)
-        inputI = inputI.view(1, 100, 100)
+        inputI = inputI.view(1, 50, 50)
 
         if self.normalize:
             composed = transforms.Compose([transforms.Normalize((0.5,), (0.5,))])

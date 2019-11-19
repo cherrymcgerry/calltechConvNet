@@ -17,23 +17,27 @@ def preprocess(dataRoot, normalise=False):
     dataTrainSamples = []
     dataTestSamples = []
     labels = []
+    samples = 40
+    idx = 0
     print('iterating dataRoot')
     for root, dirs, files in os.walk(dataRoot, topdown=True):
         for name in dirs:
             for rootf, dirf, filef in os.walk(os.path.join(dataRoot, name), topdown=True):
                 for filen in filef:
+                    #if idx < samples:
                     image = io.imread(os.path.join(dataRoot, name, filen), as_gray=True)
                     label = name
                     dataSamples.append({'image': np.array(image), 'label': label})
-
+                    #idx += 1
+                #idx = 0
                 # to later convert labels to one hot vectors
                 if not labels.__contains__(name):
                     labels.append(name)
-        for sample in dataSamples[:int(0.8*len(dataSamples))]:
-            dataTrainSamples.append(sample)
-        for sample in dataSamples[int(0.8*len(dataSamples)):]:
-            dataTestSamples.append(sample)
-        dataSamples = []
+            for sample in dataSamples[:int(0.8*len(dataSamples))]:
+                dataTrainSamples.append(sample)
+            for sample in dataSamples[int(0.8*len(dataSamples)):]:
+                dataTestSamples.append(sample)
+            dataSamples = []
 
 
     print('converting labels to onehotvectors')
