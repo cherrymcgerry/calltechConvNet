@@ -26,7 +26,7 @@ class data(Dataset):
         output = self.data[idx]['label']
 
         inputI = rescale(inputI, OUTPUT_SIZE)
-        inputI =torch.from_numpy(inputI)
+        inputI = torch.from_numpy(inputI)
         inputI = inputI.view(1, 50, 50)
 
         if self.normalize:
