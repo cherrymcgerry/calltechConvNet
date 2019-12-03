@@ -1,0 +1,35 @@
+checkpoint 1 : 	img_size : 50
+		trainsetSize : 0.8
+		testsetSize : 0.2
+		sampleSetSize : full
+		dropout : 0.5
+		kernelsize: 3
+		stride: 1
+		use_sigmoid : True
+		conv_layers : 3
+		fc_layers : 2
+		pooling : max_pool
+		batchnorm : True
+		softmax : True
+		epochs : 100
+		learnrate: 0.001
+		loss = BCELoss
+		trainAccuracy : 0.50
+		testAccuracy : 0.34
+		batchsize : 20
+		conv input outputs:   1:32 , 32:64,  64:128, fc_input:512, 512:101
+		
+
+checkpoint 2 : same as 1 but 150 epochs instead of 100
+		training accuracy : 0.56
+		testing accuracy : 0.325
+
+
+1 conv layer toevoegen = accuracy van 0.8 na 20 epochs ipv 0.5 na 100
+
+checkpoint 3 : added 1 convlayer 
+	conv input outputs:   1:32 , 32:64,  64:128, 128:256, fc_input:512, 512:101
+
+
+
+relu geeft veel beter train performance tegenover sigmoid

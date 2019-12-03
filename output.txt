@@ -1,0 +1,418 @@
+0 , accordion
+1 , airplanes
+2 , anchor
+3 , ant
+4 , BACKGROUND_Google
+5 , barrel
+6 , bass
+7 , beaver
+8 , binocular
+9 , bonsai
+10 , brain
+11 , brontosaurus
+12 , buddha
+13 , butterfly
+14 , camera
+15 , cannon
+16 , car_side
+17 , ceiling_fan
+18 , cellphone
+19 , chair
+20 , chandelier
+21 , cougar_body
+22 , cougar_face
+23 , crab
+24 , crayfish
+25 , crocodile
+26 , crocodile_head
+27 , cup
+28 , dalmatian
+29 , dollar_bill
+30 , dolphin
+31 , dragonfly
+32 , electric_guitar
+33 , elephant
+34 , emu
+35 , euphonium
+36 , ewer
+37 , Faces
+38 , ferry
+39 , flamingo
+40 , flamingo_head
+41 , garfield
+42 , gerenuk
+43 , gramophone
+44 , grand_piano
+45 , hawksbill
+46 , headphone
+47 , hedgehog
+48 , helicopter
+49 , ibis
+50 , inline_skate
+51 , joshua_tree
+52 , kangaroo
+53 , ketch
+54 , lamp
+55 , laptop
+56 , Leopards
+57 , llama
+58 , lobster
+59 , lotus
+60 , mandolin
+61 , mayfly
+62 , menorah
+63 , metronome
+64 , minaret
+65 , Motorbikes
+66 , nautilus
+67 , octopus
+68 , okapi
+69 , pagoda
+70 , panda
+71 , pigeon
+72 , pizza
+73 , platypus
+74 , pyramid
+75 , revolver
+76 , rhino
+77 , rooster
+78 , saxophone
+79 , schooner
+80 , scissors
+81 , scorpion
+82 , sea_horse
+83 , snoopy
+84 , soccer_ball
+85 , stapler
+86 , starfish
+87 , stegosaurus
+88 , stop_sign
+89 , strawberry
+90 , sunflower
+91 , tick
+92 , trilobite
+93 , umbrella
+94 , watch
+95 , water_lilly
+96 , wheelchair
+97 , wild_cat
+98 , windsor_chair
+99 , wrench
+100 , yin_yang
+setting up model
+making dataset
+making dataloader
+starting training loop
+epochs: 0/100
+Train Accuracy: 0.03
+Test Accuracy: 0.071
+accuracy 0 : 0.0 total: 195,  test: 0.0 testTotal: 41
+accuracy 1 : 0.005 total: 197,  test: 0.0 testTotal: 52
+accuracy 2 : 0.0 total: 192,  test: 0.0 testTotal: 52
+accuracy 3 : 0.011 total: 184,  test: 0.0 testTotal: 51
+accuracy 4 : 0.011 total: 182,  test: 0.0 testTotal: 49
+accuracy 5 : 0.0 total: 209,  test: 0.0 testTotal: 52
+accuracy 6 : 0.005 total: 191,  test: 0.068 testTotal: 44
+accuracy 7 : 0.01 total: 194,  test: 0.042 testTotal: 48
+accuracy 8 : 0.016 total: 188,  test: 0.19 testTotal: 21
+accuracy 9 : 0.031 total: 195,  test: 0.0 testTotal: 52
+accuracy 10 : 0.0 total: 192,  test: 0.0 testTotal: 48
+accuracy 11 : 0.0 total: 196,  test: 0.0 testTotal: 52
+accuracy 12 : 0.005 total: 194,  test: 0.0 testTotal: 51
+accuracy 13 : 0.03 total: 199,  test: 0.0 testTotal: 54
+accuracy 14 : 0.0 total: 197,  test: 0.041 testTotal: 49
+accuracy 15 : 0.0 total: 193,  test: 0.023 testTotal: 44
+accuracy 16 : 0.01 total: 194,  test: 0.0 testTotal: 54
+accuracy 17 : 0.0 total: 196,  test: 0.0 testTotal: 44
+accuracy 18 : 0.0 total: 192,  test: 0.0 testTotal: 50
+accuracy 19 : 0.0 total: 188,  test: 0.0 testTotal: 48
+accuracy 20 : 0.0 total: 191,  test: 0.0 testTotal: 47
+accuracy 21 : 0.0 total: 188,  test: 0.0 testTotal: 48
+accuracy 22 : 0.0 total: 189,  test: 0.0 testTotal: 50
+accuracy 23 : 0.0 total: 198,  test: 0.0 testTotal: 47
+accuracy 24 : 0.005 total: 198,  test: 0.0 testTotal: 50
+accuracy 25 : 0.01 total: 201,  test: 0.0 testTotal: 51
+accuracy 26 : 0.005 total: 194,  test: 0.0 testTotal: 47
+accuracy 27 : 0.005 total: 182,  test: 0.0 testTotal: 48
+accuracy 28 : 0.045 total: 200,  test: 0.087 testTotal: 46
+accuracy 29 : 0.016 total: 192,  test: 0.0 testTotal: 51
+accuracy 30 : 0.005 total: 204,  test: 0.0 testTotal: 39
+accuracy 31 : 0.0 total: 180,  test: 0.0 testTotal: 46
+accuracy 32 : 0.015 total: 197,  test: 0.0 testTotal: 42
+accuracy 33 : 0.005 total: 199,  test: 0.0 testTotal: 46
+accuracy 34 : 0.01 total: 192,  test: 0.0 testTotal: 44
+accuracy 35 : 0.0 total: 194,  test: 0.0 testTotal: 46
+accuracy 36 : 0.016 total: 188,  test: 0.0 testTotal: 50
+accuracy 37 : 0.01 total: 200,  test: 0.0 testTotal: 48
+accuracy 38 : 0.005 total: 193,  test: 0.404 testTotal: 47
+accuracy 39 : 0.0 total: 187,  test: 0.0 testTotal: 47
+accuracy 40 : 0.016 total: 186,  test: 0.0 testTotal: 50
+accuracy 41 : 0.01 total: 194,  test: 0.0 testTotal: 25
+accuracy 42 : 0.041 total: 193,  test: 0.074 testTotal: 27
+accuracy 43 : 0.005 total: 190,  test: 0.0 testTotal: 48
+accuracy 44 : 0.118 total: 203,  test: 0.542 testTotal: 48
+accuracy 45 : 0.016 total: 182,  test: 0.109 testTotal: 46
+accuracy 46 : 0.032 total: 187,  test: 0.0 testTotal: 47
+accuracy 47 : 0.0 total: 179,  test: 0.091 testTotal: 44
+accuracy 48 : 0.0 total: 188,  test: 0.0 testTotal: 50
+accuracy 49 : 0.005 total: 199,  test: 0.082 testTotal: 49
+accuracy 50 : 0.211 total: 194,  test: 0.25 testTotal: 4
+accuracy 51 : 0.0 total: 192,  test: 0.0 testTotal: 48
+accuracy 52 : 0.02 total: 200,  test: 0.0 testTotal: 50
+accuracy 53 : 0.127 total: 197,  test: 0.68 testTotal: 50
+accuracy 54 : 0.0 total: 190,  test: 0.0 testTotal: 46
+accuracy 55 : 0.005 total: 191,  test: 0.089 testTotal: 45
+accuracy 56 : 0.104 total: 193,  test: 0.061 testTotal: 49
+accuracy 57 : 0.0 total: 185,  test: 0.0 testTotal: 48
+accuracy 58 : 0.016 total: 193,  test: 0.0 testTotal: 46
+accuracy 59 : 0.005 total: 205,  test: 0.043 testTotal: 46
+accuracy 60 : 0.005 total: 191,  test: 0.0 testTotal: 49
+accuracy 61 : 0.005 total: 198,  test: 0.0 testTotal: 51
+accuracy 62 : 0.01 total: 197,  test: 0.061 testTotal: 49
+accuracy 63 : 0.015 total: 200,  test: 0.0 testTotal: 10
+accuracy 64 : 0.087 total: 195,  test: 0.321 testTotal: 53
+accuracy 65 : 0.011 total: 182,  test: 0.192 testTotal: 52
+accuracy 66 : 0.0 total: 179,  test: 0.0 testTotal: 52
+accuracy 67 : 0.0 total: 190,  test: 0.0 testTotal: 28
+accuracy 68 : 0.011 total: 182,  test: 0.235 testTotal: 51
+accuracy 69 : 0.011 total: 184,  test: 0.0 testTotal: 49
+accuracy 70 : 0.205 total: 195,  test: 0.0 testTotal: 54
+accuracy 71 : 0.005 total: 199,  test: 0.0 testTotal: 46
+accuracy 72 : 0.005 total: 187,  test: 0.0 testTotal: 42
+accuracy 73 : 0.0 total: 193,  test: 0.0 testTotal: 24
+accuracy 74 : 0.005 total: 186,  test: 0.1 testTotal: 50
+accuracy 75 : 0.0 total: 184,  test: 0.0 testTotal: 42
+accuracy 76 : 0.006 total: 174,  test: 0.0 testTotal: 49
+accuracy 77 : 0.005 total: 183,  test: 0.0 testTotal: 43
+accuracy 78 : 0.026 total: 192,  test: 0.062 testTotal: 48
+accuracy 79 : 0.074 total: 190,  test: 0.082 testTotal: 49
+accuracy 80 : 0.06 total: 200,  test: 0.157 testTotal: 51
+accuracy 81 : 0.0 total: 189,  test: 0.0 testTotal: 45
+accuracy 82 : 0.0 total: 197,  test: 0.0 testTotal: 50
+accuracy 83 : 0.275 total: 193,  test: 0.75 testTotal: 28
+accuracy 84 : 0.13 total: 193,  test: 0.204 testTotal: 54
+accuracy 85 : 0.0 total: 175,  test: 0.0 testTotal: 42
+accuracy 86 : 0.0 total: 199,  test: 0.0 testTotal: 50
+accuracy 87 : 0.0 total: 179,  test: 0.0 testTotal: 44
+accuracy 88 : 0.074 total: 190,  test: 0.467 testTotal: 45
+accuracy 89 : 0.196 total: 189,  test: 0.0 testTotal: 35
+accuracy 90 : 0.0 total: 195,  test: 0.062 testTotal: 48
+accuracy 91 : 0.006 total: 176,  test: 0.043 testTotal: 46
+accuracy 92 : 0.133 total: 188,  test: 0.74 testTotal: 50
+accuracy 93 : 0.048 total: 207,  test: 0.0 testTotal: 48
+accuracy 94 : 0.005 total: 205,  test: 0.0 testTotal: 48
+accuracy 95 : 0.0 total: 187,  test: 0.0 testTotal: 42
+accuracy 96 : 0.021 total: 188,  test: 0.0 testTotal: 50
+accuracy 97 : 0.0 total: 199,  test: 0.0 testTotal: 24
+accuracy 98 : 0.0 total: 193,  test: 0.021 testTotal: 48
+accuracy 99 : 0.078 total: 193,  test: 0.12 testTotal: 50
+accuracy 100 : 0.44 total: 200,  test: 0.82 testTotal: 50
+epochs: 1/100
+Train Accuracy: 0.092
+Test Accuracy: 0.16
+accuracy 0 : 0.021 total: 188,  test: 0.109 testTotal: 46
+accuracy 1 : 0.121 total: 198,  test: 0.37 testTotal: 46
+accuracy 2 : 0.011 total: 188,  test: 0.02 testTotal: 51
+accuracy 3 : 0.011 total: 188,  test: 0.0 testTotal: 49
+accuracy 4 : 0.005 total: 201,  test: 0.0 testTotal: 49
+accuracy 5 : 0.015 total: 194,  test: 0.0 testTotal: 49
+accuracy 6 : 0.031 total: 194,  test: 0.022 testTotal: 45
+accuracy 7 : 0.016 total: 191,  test: 0.0 testTotal: 46
+accuracy 8 : 0.075 total: 186,  test: 0.312 testTotal: 16
+accuracy 9 : 0.01 total: 193,  test: 0.0 testTotal: 52
+accuracy 10 : 0.082 total: 195,  test: 0.13 testTotal: 54
+accuracy 11 : 0.005 total: 186,  test: 0.0 testTotal: 48
+accuracy 12 : 0.0 total: 198,  test: 0.038 testTotal: 52
+accuracy 13 : 0.005 total: 190,  test: 0.0 testTotal: 49
+accuracy 14 : 0.021 total: 195,  test: 0.0 testTotal: 44
+accuracy 15 : 0.01 total: 193,  test: 0.0 testTotal: 51
+accuracy 16 : 0.168 total: 185,  test: 0.617 testTotal: 47
+accuracy 17 : 0.0 total: 200,  test: 0.0 testTotal: 47
+accuracy 18 : 0.0 total: 196,  test: 0.0 testTotal: 47
+accuracy 19 : 0.011 total: 190,  test: 0.0 testTotal: 49
+accuracy 20 : 0.041 total: 195,  test: 0.1 testTotal: 50
+accuracy 21 : 0.005 total: 202,  test: 0.0 testTotal: 50
+accuracy 22 : 0.01 total: 195,  test: 0.022 testTotal: 45
+accuracy 23 : 0.027 total: 188,  test: 0.0 testTotal: 46
+accuracy 24 : 0.042 total: 191,  test: 0.17 testTotal: 53
+accuracy 25 : 0.04 total: 198,  test: 0.273 testTotal: 44
+accuracy 26 : 0.043 total: 185,  test: 0.0 testTotal: 46
+accuracy 27 : 0.005 total: 192,  test: 0.0 testTotal: 51
+accuracy 28 : 0.109 total: 192,  test: 0.106 testTotal: 47
+accuracy 29 : 0.073 total: 193,  test: 0.0 testTotal: 46
+accuracy 30 : 0.101 total: 198,  test: 0.302 testTotal: 53
+accuracy 31 : 0.01 total: 196,  test: 0.0 testTotal: 52
+accuracy 32 : 0.015 total: 200,  test: 0.0 testTotal: 44
+accuracy 33 : 0.036 total: 192,  test: 0.104 testTotal: 48
+accuracy 34 : 0.01 total: 203,  test: 0.0 testTotal: 46
+accuracy 35 : 0.108 total: 194,  test: 0.311 testTotal: 45
+accuracy 36 : 0.022 total: 185,  test: 0.0 testTotal: 47
+accuracy 37 : 0.24 total: 196,  test: 0.375 testTotal: 48
+accuracy 38 : 0.258 total: 186,  test: 0.302 testTotal: 43
+accuracy 39 : 0.01 total: 193,  test: 0.0 testTotal: 45
+accuracy 40 : 0.067 total: 194,  test: 0.196 testTotal: 51
+accuracy 41 : 0.053 total: 190,  test: 0.12 testTotal: 25
+accuracy 42 : 0.026 total: 194,  test: 0.192 testTotal: 26
+accuracy 43 : 0.005 total: 199,  test: 0.0 testTotal: 45
+accuracy 44 : 0.307 total: 192,  test: 0.723 testTotal: 47
+accuracy 45 : 0.053 total: 189,  test: 0.087 testTotal: 46
+accuracy 46 : 0.112 total: 197,  test: 0.0 testTotal: 47
+accuracy 47 : 0.031 total: 194,  test: 0.449 testTotal: 49
+accuracy 48 : 0.051 total: 196,  test: 0.109 testTotal: 46
+accuracy 49 : 0.011 total: 185,  test: 0.0 testTotal: 50
+accuracy 50 : 0.419 total: 198,  test: 0.4 testTotal: 5
+accuracy 51 : 0.021 total: 188,  test: 0.02 testTotal: 50
+accuracy 52 : 0.015 total: 196,  test: 0.0 testTotal: 48
+accuracy 53 : 0.254 total: 181,  test: 0.725 testTotal: 51
+accuracy 54 : 0.036 total: 196,  test: 0.02 testTotal: 50
+accuracy 55 : 0.049 total: 182,  test: 0.17 testTotal: 47
+accuracy 56 : 0.174 total: 184,  test: 0.234 testTotal: 47
+accuracy 57 : 0.0 total: 190,  test: 0.0 testTotal: 50
+accuracy 58 : 0.015 total: 195,  test: 0.042 testTotal: 48
+accuracy 59 : 0.043 total: 207,  test: 0.0 testTotal: 54
+accuracy 60 : 0.0 total: 198,  test: 0.0 testTotal: 48
+accuracy 61 : 0.005 total: 185,  test: 0.02 testTotal: 51
+accuracy 62 : 0.228 total: 189,  test: 0.604 testTotal: 53
+accuracy 63 : 0.515 total: 198,  test: 0.727 testTotal: 11
+accuracy 64 : 0.175 total: 189,  test: 0.444 testTotal: 45
+accuracy 65 : 0.205 total: 185,  test: 0.422 testTotal: 45
+accuracy 66 : 0.0 total: 188,  test: 0.0 testTotal: 50
+accuracy 67 : 0.005 total: 199,  test: 0.03 testTotal: 33
+accuracy 68 : 0.104 total: 192,  test: 0.479 testTotal: 48
+accuracy 69 : 0.048 total: 188,  test: 0.043 testTotal: 47
+accuracy 70 : 0.145 total: 193,  test: 0.304 testTotal: 46
+accuracy 71 : 0.0 total: 184,  test: 0.023 testTotal: 44
+accuracy 72 : 0.209 total: 191,  test: 0.292 testTotal: 48
+accuracy 73 : 0.026 total: 196,  test: 0.0 testTotal: 24
+accuracy 74 : 0.082 total: 184,  test: 0.304 testTotal: 46
+accuracy 75 : 0.042 total: 190,  test: 0.189 testTotal: 53
+accuracy 76 : 0.0 total: 194,  test: 0.075 testTotal: 53
+accuracy 77 : 0.037 total: 187,  test: 0.125 testTotal: 48
+accuracy 78 : 0.036 total: 196,  test: 0.1 testTotal: 50
+accuracy 79 : 0.203 total: 192,  test: 0.0 testTotal: 46
+accuracy 80 : 0.171 total: 193,  test: 0.217 testTotal: 46
+accuracy 81 : 0.0 total: 192,  test: 0.019 testTotal: 53
+accuracy 82 : 0.041 total: 193,  test: 0.043 testTotal: 46
+accuracy 83 : 0.523 total: 199,  test: 0.688 testTotal: 32
+accuracy 84 : 0.463 total: 188,  test: 0.837 testTotal: 49
+accuracy 85 : 0.113 total: 195,  test: 0.125 testTotal: 48
+accuracy 86 : 0.0 total: 170,  test: 0.0 testTotal: 48
+accuracy 87 : 0.005 total: 194,  test: 0.0 testTotal: 48
+accuracy 88 : 0.536 total: 194,  test: 0.686 testTotal: 51
+accuracy 89 : 0.14 total: 193,  test: 0.088 testTotal: 34
+accuracy 90 : 0.02 total: 200,  test: 0.064 testTotal: 47
+accuracy 91 : 0.122 total: 197,  test: 0.6 testTotal: 45
+accuracy 92 : 0.232 total: 190,  test: 0.435 testTotal: 46
+accuracy 93 : 0.036 total: 192,  test: 0.137 testTotal: 51
+accuracy 94 : 0.0 total: 186,  test: 0.0 testTotal: 45
+accuracy 95 : 0.068 total: 190,  test: 0.286 testTotal: 42
+accuracy 96 : 0.036 total: 196,  test: 0.14 testTotal: 50
+accuracy 97 : 0.006 total: 176,  test: 0.042 testTotal: 24
+accuracy 98 : 0.089 total: 179,  test: 0.118 testTotal: 51
+accuracy 99 : 0.403 total: 196,  test: 0.364 testTotal: 44
+accuracy 100 : 0.639 total: 191,  test: 0.75 testTotal: 44
+epochs: 2/100
+Train Accuracy: 0.153
+Test Accuracy: 0.231
+accuracy 0 : 0.313 total: 198,  test: 0.5 testTotal: 48
+accuracy 1 : 0.314 total: 194,  test: 0.5 testTotal: 52
+accuracy 2 : 0.0 total: 191,  test: 0.0 testTotal: 41
+accuracy 3 : 0.031 total: 196,  test: 0.0 testTotal: 51
+accuracy 4 : 0.005 total: 185,  test: 0.0 testTotal: 48
+accuracy 5 : 0.036 total: 195,  test: 0.082 testTotal: 49
+accuracy 6 : 0.021 total: 192,  test: 0.06 testTotal: 50
+accuracy 7 : 0.02 total: 196,  test: 0.02 testTotal: 49
+accuracy 8 : 0.165 total: 188,  test: 0.688 testTotal: 16
+accuracy 9 : 0.005 total: 191,  test: 0.077 testTotal: 52
+accuracy 10 : 0.104 total: 193,  test: 0.137 testTotal: 51
+accuracy 11 : 0.032 total: 187,  test: 0.0 testTotal: 47
+accuracy 12 : 0.032 total: 186,  test: 0.048 testTotal: 42
+accuracy 13 : 0.005 total: 185,  test: 0.0 testTotal: 45
+accuracy 14 : 0.021 total: 187,  test: 0.021 testTotal: 48
+accuracy 15 : 0.016 total: 188,  test: 0.0 testTotal: 49
+accuracy 16 : 0.339 total: 192,  test: 0.56 testTotal: 50
+accuracy 17 : 0.011 total: 189,  test: 0.0 testTotal: 49
+accuracy 18 : 0.016 total: 185,  test: 0.062 testTotal: 48
+accuracy 19 : 0.0 total: 198,  test: 0.0 testTotal: 47
+accuracy 20 : 0.099 total: 192,  test: 0.227 testTotal: 44
+accuracy 21 : 0.01 total: 204,  test: 0.0 testTotal: 46
+accuracy 22 : 0.021 total: 193,  test: 0.067 testTotal: 45
+accuracy 23 : 0.022 total: 186,  test: 0.0 testTotal: 43
+accuracy 24 : 0.039 total: 180,  test: 0.022 testTotal: 45
+accuracy 25 : 0.093 total: 193,  test: 0.0 testTotal: 51
+accuracy 26 : 0.07 total: 200,  test: 0.34 testTotal: 47
+accuracy 27 : 0.0 total: 198,  test: 0.0 testTotal: 46
+accuracy 28 : 0.346 total: 191,  test: 0.511 testTotal: 47
+accuracy 29 : 0.183 total: 191,  test: 0.286 testTotal: 49
+accuracy 30 : 0.154 total: 195,  test: 0.204 testTotal: 49
+accuracy 31 : 0.032 total: 189,  test: 0.12 testTotal: 50
+accuracy 32 : 0.021 total: 188,  test: 0.0 testTotal: 48
+accuracy 33 : 0.074 total: 188,  test: 0.18 testTotal: 50
+accuracy 34 : 0.021 total: 192,  test: 0.0 testTotal: 50
+accuracy 35 : 0.246 total: 191,  test: 0.558 testTotal: 43
+accuracy 36 : 0.015 total: 195,  test: 0.0 testTotal: 48
+accuracy 37 : 0.382 total: 178,  test: 0.62 testTotal: 50
+accuracy 38 : 0.286 total: 192,  test: 0.46 testTotal: 50
+accuracy 39 : 0.005 total: 192,  test: 0.0 testTotal: 44
+accuracy 40 : 0.184 total: 196,  test: 0.396 testTotal: 48
+accuracy 41 : 0.199 total: 191,  test: 0.423 testTotal: 26
+accuracy 42 : 0.036 total: 192,  test: 0.036 testTotal: 28
+accuracy 43 : 0.026 total: 192,  test: 0.02 testTotal: 49
+accuracy 44 : 0.481 total: 183,  test: 0.714 testTotal: 49
+accuracy 45 : 0.083 total: 181,  test: 0.065 testTotal: 46
+accuracy 46 : 0.17 total: 194,  test: 0.542 testTotal: 48
+accuracy 47 : 0.108 total: 176,  test: 0.022 testTotal: 45
+accuracy 48 : 0.069 total: 189,  test: 0.021 testTotal: 47
+accuracy 49 : 0.025 total: 201,  test: 0.042 testTotal: 48
+accuracy 50 : 0.644 total: 194,  test: 0.833 testTotal: 6
+accuracy 51 : 0.098 total: 194,  test: 0.311 testTotal: 45
+accuracy 52 : 0.015 total: 201,  test: 0.196 testTotal: 51
+accuracy 53 : 0.33 total: 197,  test: 0.217 testTotal: 46
+accuracy 54 : 0.043 total: 188,  test: 0.02 testTotal: 49
+accuracy 55 : 0.142 total: 190,  test: 0.288 testTotal: 52
+accuracy 56 : 0.197 total: 193,  test: 0.457 testTotal: 46
+accuracy 57 : 0.005 total: 199,  test: 0.0 testTotal: 51
+accuracy 58 : 0.063 total: 189,  test: 0.04 testTotal: 50
+accuracy 59 : 0.054 total: 185,  test: 0.133 testTotal: 45
+accuracy 60 : 0.026 total: 192,  test: 0.0 testTotal: 46
+accuracy 61 : 0.035 total: 200,  test: 0.021 testTotal: 47
+accuracy 62 : 0.4 total: 200,  test: 0.833 testTotal: 48
+accuracy 63 : 0.688 total: 189,  test: 0.929 testTotal: 14
+accuracy 64 : 0.369 total: 187,  test: 0.556 testTotal: 45
+accuracy 65 : 0.281 total: 185,  test: 0.451 testTotal: 51
+accuracy 66 : 0.015 total: 202,  test: 0.0 testTotal: 48
+accuracy 67 : 0.015 total: 199,  test: 0.107 testTotal: 28
+accuracy 68 : 0.088 total: 194,  test: 0.347 testTotal: 49
+accuracy 69 : 0.244 total: 201,  test: 0.375 testTotal: 48
+accuracy 70 : 0.311 total: 193,  test: 0.455 testTotal: 44
+accuracy 71 : 0.026 total: 193,  test: 0.174 testTotal: 46
+accuracy 72 : 0.276 total: 199,  test: 0.442 testTotal: 43
+accuracy 73 : 0.045 total: 199,  test: 0.038 testTotal: 26
+accuracy 74 : 0.204 total: 181,  test: 0.271 testTotal: 48
+accuracy 75 : 0.169 total: 189,  test: 0.38 testTotal: 50
+accuracy 76 : 0.015 total: 198,  test: 0.02 testTotal: 51
+accuracy 77 : 0.184 total: 196,  test: 0.551 testTotal: 49
+accuracy 78 : 0.088 total: 194,  test: 0.102 testTotal: 49
+accuracy 79 : 0.218 total: 193,  test: 0.596 testTotal: 47
+accuracy 80 : 0.244 total: 193,  test: 0.151 testTotal: 53
+accuracy 81 : 0.0 total: 181,  test: 0.019 testTotal: 53
+accuracy 82 : 0.064 total: 203,  test: 0.0 testTotal: 48
+accuracy 83 : 0.601 total: 183,  test: 0.621 testTotal: 29
+accuracy 84 : 0.667 total: 192,  test: 0.783 testTotal: 46
+accuracy 85 : 0.175 total: 194,  test: 0.51 testTotal: 49
+accuracy 86 : 0.005 total: 201,  test: 0.0 testTotal: 48
+accuracy 87 : 0.01 total: 193,  test: 0.0 testTotal: 54
+accuracy 88 : 0.677 total: 189,  test: 0.8 testTotal: 45
+accuracy 89 : 0.162 total: 191,  test: 0.2 testTotal: 30
+accuracy 90 : 0.064 total: 188,  test: 0.085 testTotal: 47
+accuracy 91 : 0.328 total: 192,  test: 0.688 testTotal: 48
+accuracy 92 : 0.297 total: 202,  test: 0.511 testTotal: 45
+accuracy 93 : 0.162 total: 191,  test: 0.0 testTotal: 46
+accuracy 94 : 0.027 total: 187,  test: 0.065 testTotal: 46
+accuracy 95 : 0.176 total: 199,  test: 0.413 testTotal: 46
+accuracy 96 : 0.073 total: 191,  test: 0.125 testTotal: 56
+accuracy 97 : 0.031 total: 191,  test: 0.0 testTotal: 27
+accuracy 98 : 0.283 total: 191,  test: 0.577 testTotal: 52
+accuracy 99 : 0.474 total: 196,  test: 0.451 testTotal: 51
+accuracy 100 : 0.696 total: 191,  test: 0.792 testTotal: 53
+epochs: 3/100

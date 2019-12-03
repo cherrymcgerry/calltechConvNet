@@ -6,7 +6,20 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 USE_SIGMOID = False
+#convolution is de filter die naar lokale regio kijkt en dan dot product neemt van de 2 vectors (filtervector en lokaleregio vector) en output wordt dan 1 (pixel) van u activation map. maxPooling is ipv dotproduct pakje gwn grootste value. pooling layers pakje meestal stride waarbij da filter nie overlapt.
+#maar om de zoveel layers ne keer pooling doen. bij pooling layers wordt geen zeropadding gebruikt en meestal filter size 2 of 3 en stride 2
+#max pooling is beter omdaje eeen signaal krijgt van hoogste firing. en das eigenlijk logisch want ge wilt weten waardatie t meest activeerd
+#ge kunt stride gebuiken ipv pooling. en meer en meer wordt enkel stride gebruikt vo te downsizen. geeft ook betere results.
+#zeropad data!!! for corners common : (filtersize -1)/2
+#stride is lik pooling omdaje ook u output resolutie verkleint. werkt soms beter dan pooling layers. verkleint de size van de actrivation maps per layer en dan hebje ook minder parameters.
+# (input - filter) / stride + 1 = output (moet altijd int zijn want decimal duidt op filter die niet overal kan toegepast worden)
+#fixed learning rate??? opzoeken
+#toepassen data augmentation om dataset te vergroten en overfitting verminderen.
 
+#conv layers en pool layers ebben verschillende settings.
+
+#fully connected layers. nemen conv output en stretch them out. dan verkleinen totdaje u score outputs ebt.
+#trend nu is weggaan van pool en fully connected layers en enkel convlayers gebruiken
 
 # TODO add Downconv module te clean up code
 
@@ -25,10 +38,10 @@ class ConvNet(nn.Module):
         self.conv4_bn = nn.BatchNorm2d(256)
         self.conv5 = nn.Conv2d(256, 512, 3)
         self.conv5_bn = nn.BatchNorm2d(512)
-        self.conv6 = nn.Conv2d(512, 1024, 3)
-        self.conv6_bn = nn.BatchNorm2d(1024)
-        self.conv7 = nn.Conv2d(1024, 2048, 3)
-        self.conv7_bn = nn.BatchNorm2d(2048)
+        self.conv6 = nn.Conv2d(128, 256, 3)
+        self.conv6_bn = nn.BatchNorm2d(256)
+        self.conv7 = nn.Conv2d(256, 512, 3)
+        self.conv7_bn = nn.BatchNorm2d(512)
 
         self.layer1 = self.conv1
         self.layer2 = nn.Sequential()
@@ -57,9 +70,10 @@ class ConvNet(nn.Module):
 
         x = torch.randn(50, 50).view(-1, 1, 50, 50)
         self._to_linear = None
+        self.dropout = nn.Dropout2d()
         self.convs(x)
 
-        self.dropout = nn.Dropout2d()
+
 
         self.fc1 = nn.Linear(self._to_linear, 1024)
         self.fc1_bn = nn.BatchNorm2d(1024)
@@ -84,12 +98,17 @@ class ConvNet(nn.Module):
 
         else:
             x = F.max_pool2d(F.relu(self.layer1(x)), (2, 2))
+            #x = self.dropout(x)
             x = F.max_pool2d(F.relu(self.layer2(x)), (2, 2))
+            #x = self.dropout(x)
             x = F.max_pool2d(F.relu(self.layer3(x)), (2, 2))
+            #x = self.dropout(x)
             x = F.max_pool2d(F.relu(self.layer4(x)), (2, 2))
-            #x = F.max_pool2d(F.relu(self.layer5(x)), (2, 2))
-            #x = F.max_pool2d(F.relu(self.layer6(x)), (2, 2))
+
+            #x = F.relu(self.layer5(x))
+            #x = F.relu(self.layer6(x))
             #x = F.max_pool2d(F.relu(self.layer7(x)), (2, 2))
+            #x = self.dropout(x)
 
         if self._to_linear is None:
             self._to_linear = x[0].shape[0] * x[0].shape[1] * x[0].shape[2]

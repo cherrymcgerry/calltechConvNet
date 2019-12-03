@@ -8,7 +8,7 @@ from Data.Setup_Database import setup_database
 import os
 import pickle
 
-EPOCHS = 40
+EPOCHS = 100
 CHECKPOINT_FREQ = 10
 
 
@@ -22,17 +22,17 @@ class Model(object):
         # Setup device
         use_cuda = torch.cuda.is_available()
         self.device = torch.device("cuda:0" if use_cuda else "cpu")
-
+        self.dict = {}
         self.epoch = 0
         self.data_loader = data_loader
         self.loss = []
         self.result_root = './result'
 
-        inputI, output = next(iter(data_loader))
+        # inputI, output = next(iter(data_loader))
         # size = [inputI.size(), output.size()]
         self.model = ConvNet()
 
-        self.optim = optim.Adam(self.model.parameters(), lr=0.001)
+        self.optim = optim.Adam(self.model.parameters(), lr=0.0001)
 
         initModel(self, self.device)
 
@@ -41,15 +41,14 @@ class Model(object):
     def test(self):
         correct = 0
         total = 0
-
+        self.model.eval()
         for i, data in enumerate(self.testData_loader):
-            self.model.zero_grad()
+            with torch.no_grad():
 
-            inputI = data[0].view(-1, 1, 50, 50).to(device=self.device, dtype=torch.float)  # TODO add .view
-            output = data[1].to(device=self.device, dtype=torch.float)
+                inputI = data[0].view(-1, 1, 50, 50).to(device=self.device, dtype=torch.float)  # TODO add .view
+                output = data[1].to(device=self.device, dtype=torch.float)
 
-            prediction = self.model(inputI)
-            # self.optim.step()
+                prediction = self.model(inputI)
 
             # eval
             eval = []
@@ -64,12 +63,23 @@ class Model(object):
                 eval.append({'pred': predicted_class[i], 'real': real_class[i]})
 
             for sample in eval:
+                dictKeys = self.dict.keys()
                 if sample['pred'] == sample['real']:
                     correct += 1
+                    for key in dictKeys:
+                        if sample['real'] == key:
+                            self.dict[key] = {'correct': (self.dict.get(key)).get('correct'),'total': self.dict.get(key).get('total'), 'testCorrect': self.dict.get(key).get('testCorrect')+1, 'testTotal': self.dict.get(key).get('testTotal')+1}
+                            break
+                else:
+                    for key in dictKeys:
+                        if sample['real'] == key:
+                            self.dict[key] = {'correct': (self.dict.get(key)).get('correct'),'total': self.dict.get(key).get('total'), 'testCorrect': self.dict.get(key).get('testCorrect'), 'testTotal': self.dict.get(key).get('testTotal')+1}
+                            break
                 total += 1
 
         # self.epoch += 1
         print(F'Test Accuracy: {round(correct / total, 3)}')
+        self.model.train()
 
     def train(self):
         lossF = nn.BCELoss()
@@ -89,6 +99,7 @@ class Model(object):
 
                 prediction = self.model(inputI)
                 loss = lossF(prediction, output)
+
                 loss.backward()
                 self.optim.step()
 
@@ -105,19 +116,54 @@ class Model(object):
                     eval.append({'pred': predicted_class[i], 'real': real_class[i]})
 
                 for sample in eval:
+                    update = {}
+
+                    dictKeys = self.dict.keys()
                     if sample['pred'] == sample['real']:
                         correct += 1
+                        indict = False
+                        for key in dictKeys:
+                            if sample['real'] == key:
+                                self.dict[key] = {'correct': ((self.dict.get(key)).get('correct') +1),'total': ((self.dict.get(key).get('total')) + 1), 'testCorrect' : 0, 'testTotal' : 0}
+                                indict = True
+                                break
+                        if not indict:
+                            update = {sample['real']: {'correct': 1, 'total': 1, 'testCorrect' : 0, 'testTotal' : 0}}
+                            self.dict.update(update)
+
+                    else:
+                        indict = False
+                        for key in dictKeys:
+                            if sample['real'] == key:
+
+                                self.dict[key] = {'correct': (self.dict.get(key)).get('correct'),'total': ((self.dict.get(key).get('total')) + 1), 'testCorrect' : 0, 'testTotal' : 0}
+                                indict = True
+                                break
+
+                        if not indict:
+                                update = {sample['real']: {'correct': 0, 'total': 1, 'testCorrect' : 0, 'testTotal' : 0}}
+                                self.dict.update(update)
+
+
+
                     total += 1
 
-
             self.epoch += 1
+            # print(torch.cuda.current_device())
+            # print(torch.cuda.get_device_name(torch.cuda.current_device()))
+            # print(torch.cuda.is_available())
 
 
+
+                #accuracy + total, testaccuracy + total,
             print(F'Train Accuracy: {round(correct / total, 3)}')
+
             if self.epoch % CHECKPOINT_FREQ == 0:
                 saveCheckpoint(self)
             self.test()
-
+            for key, dict in sorted(self.dict.items()):
+                print(F'accuracy {key} : {round(dict["correct"] / dict["total"], 3)} total: {dict["total"]},  test: {round(dict["testCorrect"] / dict["testTotal"],3)} testTotal: {dict["testTotal"]}')
+            self.dict = {}
         saveCheckpoint(self)
         print("Training finished")
 

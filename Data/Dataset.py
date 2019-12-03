@@ -11,7 +11,7 @@ OUTPUT_SIZE = (50, 50)
 class data(Dataset):
 
     def __init__(self, dataroot, is_train, device='cpu', normalize=True):
-        path = os.path.join(dataroot, 'train_data.data' if is_train else 'test_data.data')
+        path = os.path.join(dataroot, 'train_data.data' if is_train else 'val_data.data')
         with open(path, 'rb') as f:
             self.data = pickle.load(f)
 
@@ -39,14 +39,17 @@ class data(Dataset):
 def rescale(image, output_size):
     assert isinstance(output_size, (int, tuple))
 
-    h, w = image.shape[:2]
-    if isinstance(output_size, int):
-        if h > w:
-            new_h, new_w = output_size * h / w, output_size
+    try:
+        h, w = image.shape[:2]
+        if isinstance(output_size, int):
+            if h > w:
+                new_h, new_w = output_size * h / w, output_size
+            else:
+                new_h, new_w = output_size, output_size * w / h
         else:
-            new_h, new_w = output_size, output_size * w / h
-    else:
-        new_h, new_w = output_size
+            new_h, new_w = output_size
+    except:
+        print("exception in rescale")
 
     image = transform.resize(image, (new_h, new_w))
     return image

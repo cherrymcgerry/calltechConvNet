@@ -4,10 +4,9 @@
     <list default="true" id="00efa03e-08f8-4681-bbdf-64d41c63b264" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/PreProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/PreProcess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/ConvNet1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ConvNet1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/dict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result/dict.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,15 +123,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Model/Model.py</url>
-          <line>122</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/Data/Dataset.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="output.data.data.data.data" />
+        <watch expression="loopSamples[59]" />
       </configuration>
     </watches-manager>
   </component>
