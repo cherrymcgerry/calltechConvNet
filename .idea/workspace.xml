@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="00efa03e-08f8-4681-bbdf-64d41c63b264" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/PreProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/PreProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ConvNet1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ConvNet1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,6 +124,11 @@
           <url>file://$PROJECT_DIR$/Data/Dataset.py</url>
           <line>51</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Main.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
